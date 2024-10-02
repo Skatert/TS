@@ -8,6 +8,10 @@ type Person = {
 
 // напишите дженерик который будет с ним делать следующее
 
+type MyNullable<T> = {
+  [K in keyof T]: T[K] | null;
+};
+
 type NullablePerson = {
   name: string | null;
   email: string | null;

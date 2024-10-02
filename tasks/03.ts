@@ -1,1 +1,6 @@
 // Напишите свой Partial
+
+type MyPartial<T> = {
+    [K in keyof T]?: T[K];
+  };
+  

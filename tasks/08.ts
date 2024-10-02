@@ -1,5 +1,8 @@
 //  написать тип для arr, учтите, что массив может быть неограниченной вложенности
-const arr = [
+
+type MyArr<T> = T | MyArr<T>[];
+
+const arr: MyArr<number> = [
   1,
   5,
   [

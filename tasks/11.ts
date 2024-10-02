@@ -1,7 +1,11 @@
 // сделайте код рабочим, трогать первые 5 строк трогать запрещено!
 
 try {
-  throw new Error('hello world!');
+  throw new Error("hello world!");
 } catch (e: unknown) {
-  console.log(e.message);
+  if (e instanceof Error) {
+    console.log(e.message);
+  } else {
+    console.log("unknown error");
+  }
 }

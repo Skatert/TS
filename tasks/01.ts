@@ -11,3 +11,6 @@ type Bar = {
 
 type Test123 = Foo & Bar;
 type Test321 = Foo | Bar;
+
+// У Test123 тип будет {two: string; one: boolean; three: string}
+// У Test321 тип будет {two: string} или {one: boolean; three: string;}

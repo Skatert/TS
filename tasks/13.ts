@@ -6,13 +6,17 @@ type User = {
 };
 
 const ob1: User = {
-  name: 'vasya',
+  name: "vasya",
   age: 123,
-  sayHello(){
-    return 0
-  }
+  sayHello() {
+    return 0;
+  },
 };
 
 // тут ваш код
 
-console.log(ob1.name, ob1.age, ob1.sayHello());
+if (ob1.sayHello) {
+  console.log(ob1.name, ob1.age, ob1.sayHello());
+} else {
+  console.log(ob1.name, ob1.age, "sayHello is not defined");
+}
